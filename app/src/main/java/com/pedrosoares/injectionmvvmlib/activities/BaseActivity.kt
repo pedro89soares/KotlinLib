@@ -1,4 +1,4 @@
-package com.pedrosoares.injectionmvvmlib.viewModels.activities
+package com.pedrosoares.injectionmvvmlib.activities
 
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders

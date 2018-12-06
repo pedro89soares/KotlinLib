@@ -1,9 +1,9 @@
-package com.pedrosoares.injectionmvvmlib.viewModels.services
+package com.pedrosoares.injectionmvvmlib.services
 
 import android.app.Application
 import android.content.Context
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.DialogService
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.SharedPreferencesService
+import com.pedrosoares.injectionmvvmlib.interfaces.DialogService
+import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
 import dagger.Module
 import dagger.Provides
 import io.reactivex.annotations.NonNull

@@ -1,7 +1,7 @@
-package com.pedrosoares.injectionmvvmlib.viewModels.services
+package com.pedrosoares.injectionmvvmlib.services
 
 import android.content.Context
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.SharedPreferencesService
+import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
 import javax.inject.Inject
 
 class SimpleSharedPreferencesService @Inject constructor(private val context: Context) : SharedPreferencesService {

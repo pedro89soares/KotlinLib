@@ -1,4 +1,4 @@
-package com.pedrosoares.injectionmvvmlib.viewModels.interfaces
+package com.pedrosoares.injectionmvvmlib.interfaces
 
 interface SharedPreferencesService {
 

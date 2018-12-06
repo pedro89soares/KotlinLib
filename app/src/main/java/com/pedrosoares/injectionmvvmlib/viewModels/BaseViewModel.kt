@@ -3,8 +3,8 @@ package tassks.agap2.com.common_core.viewModels
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableBoolean
 import android.os.Bundle
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.DialogService
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.SharedPreferencesService
+import com.pedrosoares.injectionmvvmlib.interfaces.DialogService
+import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
 import tassks.agap2.com.common_core.interfaces.NavigationService
 import tassks.agap2.com.common_core.utils.ResourceUtils
 import javax.inject.Inject

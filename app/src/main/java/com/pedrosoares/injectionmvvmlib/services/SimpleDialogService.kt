@@ -1,10 +1,10 @@
-package com.pedrosoares.injectionmvvmlib.viewModels.services
+package com.pedrosoares.injectionmvvmlib.services
 
 import android.content.Context
 import android.support.design.widget.Snackbar
 import android.widget.Toast
 import com.pedrosoares.injectionmvvmlib.extensions.rootView
-import com.pedrosoares.injectionmvvmlib.viewModels.interfaces.DialogService
+import com.pedrosoares.injectionmvvmlib.interfaces.DialogService
 import tassks.agap2.com.common_core.services.CurrentActivityTracker
 import javax.inject.Inject
 
