@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support:appcompat-v7:$support_version"
+    api "com.android.support:recyclerview-v7:$support_version"
+
+    //Kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines_version"
+    api 'android.arch.lifecycle:extensions:1.1.1'
+
+    //DI
+    api "com.google.dagger:dagger:$dagger_version"
+    api "com.google.dagger:dagger-android-support:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+
+    //Network
+    api "com.squareup.retrofit2:retrofit:$retrofit_version"
+    api "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    api "com.google.code.gson:gson:$gson_version"
+    api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:$retrofin_kotlin_adapter_version"
+
+    //RxJava
+    api "io.reactivex.rxjava2:rxjava:$rxJava"
+    api "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    api "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-support-v4:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-design:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-design-kotlin:$rxBinding"
+    api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7-kotlin:$rxBinding"
+    api "com.trello.rxlifecycle2:rxlifecycle:$rxLifeCycle"
+    api "com.trello.rxlifecycle2:rxlifecycle-android:$rxLifeCycle"
+    api "com.trello.rxlifecycle2:rxlifecycle-components:$rxLifeCycle"
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
