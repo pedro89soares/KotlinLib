@@ -1,4 +1,4 @@
-package tassks.agap2.com.common_core.services
+package com.pedrosoares.injectionmvvmlib.services
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v4.app.ActivityOptionsCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import tassks.agap2.com.common_core.interfaces.NavigationService
+import com.pedrosoares.injectionmvvmlib.interfaces.NavigationService
 import javax.inject.Inject
 
 class SimpleNavigationService @Inject constructor(private val context: Context, private val activityTracker: CurrentActivityTracker) : NavigationService {

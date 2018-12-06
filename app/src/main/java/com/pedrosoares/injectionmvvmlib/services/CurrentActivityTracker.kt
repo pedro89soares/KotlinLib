@@ -1,4 +1,4 @@
-package tassks.agap2.com.common_core.services
+package com.pedrosoares.injectionmvvmlib.services
 
 import android.app.Activity
 import android.app.Application

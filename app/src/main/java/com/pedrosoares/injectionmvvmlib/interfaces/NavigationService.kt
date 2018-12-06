@@ -1,4 +1,4 @@
-package tassks.agap2.com.common_core.interfaces
+package com.pedrosoares.injectionmvvmlib.interfaces
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

@@ -1,12 +1,13 @@
-package tassks.agap2.com.common_core.viewModels
+package com.pedrosoares.injectionmvvmlib.viewModels
 
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableBoolean
 import android.os.Bundle
 import com.pedrosoares.injectionmvvmlib.interfaces.DialogService
+import com.pedrosoares.injectionmvvmlib.interfaces.NavigationService
 import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
-import tassks.agap2.com.common_core.interfaces.NavigationService
-import tassks.agap2.com.common_core.utils.ResourceUtils
+import com.pedrosoares.injectionmvvmlib.utils.ResourceUtils
+
 import javax.inject.Inject
 
 abstract class BaseViewModel : ViewModel() {

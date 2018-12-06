@@ -7,9 +7,7 @@ import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
 import dagger.Module
 import dagger.Provides
 import io.reactivex.annotations.NonNull
-import tassks.agap2.com.common_core.interfaces.NavigationService
-import tassks.agap2.com.common_core.services.CurrentActivityTracker
-import tassks.agap2.com.common_core.services.SimpleNavigationService
+import com.pedrosoares.injectionmvvmlib.interfaces.NavigationService
 import javax.inject.Singleton
 
 @Module

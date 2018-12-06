@@ -6,8 +6,8 @@ import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
+import com.pedrosoares.injectionmvvmlib.viewModels.BaseViewModel
 import dagger.android.support.DaggerAppCompatActivity
-import tassks.agap2.com.common_core.viewModels.BaseViewModel
 import javax.inject.Inject
 
 abstract class BaseActivity<T : ViewDataBinding, V : BaseViewModel>(private val layoutId: Int, private val viewModelVariable: Int, private val viewModelClass: Class<V>) : DaggerAppCompatActivity() {

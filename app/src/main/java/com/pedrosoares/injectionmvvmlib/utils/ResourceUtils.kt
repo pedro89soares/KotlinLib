@@ -1,4 +1,4 @@
-package tassks.agap2.com.common_core.utils
+package com.pedrosoares.injectionmvvmlib.utils
 
 import android.content.Context
 import javax.inject.Inject

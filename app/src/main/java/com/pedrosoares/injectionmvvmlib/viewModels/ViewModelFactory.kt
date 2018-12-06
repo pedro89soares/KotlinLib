@@ -1,4 +1,4 @@
-package tassks.agap2.com.common_core.viewModels
+package com.pedrosoares.injectionmvvmlib.viewModels
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
