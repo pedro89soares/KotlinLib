@@ -1,6 +1,5 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -40,8 +39,6 @@ dependencies {
     //DI
     api "com.google.dagger:dagger:$dagger_version"
     api "com.google.dagger:dagger-android-support:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
 
     //Network
     api "com.squareup.retrofit2:retrofit:$retrofit_version"
