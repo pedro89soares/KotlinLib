@@ -20,21 +20,21 @@ class SimpleNavigationService @Inject constructor(private val context: Context, 
         intent.putExtras(bundle)
         if (!addCurrentToBackStack)
             currentActivity?.finish()
-        context.startActivity(intent)
+        currentActivity?.startActivity(intent)
     }
 
     override fun <T : AppCompatActivity> navigateBackTo(activity: Class<T>, bundle: Bundle) {
         val intent = Intent(context, activity)
         intent.putExtras(bundle)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-        context.startActivity(intent)
+        currentActivity?.startActivity(intent)
     }
 
     override fun <T : AppCompatActivity> navigateBackToAndResetStack(activity: Class<T>, bundle: Bundle) {
         val intent = Intent(context, activity)
         intent.putExtras(bundle)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        context.startActivity(intent)
+        currentActivity?.startActivity(intent)
     }
 
     override fun <T : AppCompatActivity> navigateToWithSharedElement(activity: Class<T>, sharedViewId: Int, sharedElementTransitionName: String, bundle: Bundle) {
@@ -42,7 +42,7 @@ class SimpleNavigationService @Inject constructor(private val context: Context, 
         val view = currentActivity!!.findViewById<View>(sharedViewId)
         val optBundle = ActivityOptionsCompat.makeSceneTransitionAnimation(currentActivity!!, view, sharedElementTransitionName).toBundle()
         optBundle?.putAll(bundle)
-        context.startActivity(intent, optBundle)
+        currentActivity?.startActivity(intent, optBundle)
     }
 
     override fun back() {
