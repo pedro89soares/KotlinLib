@@ -42,8 +42,8 @@ dependencies {
     api "com.google.code.gson:gson:$gson_version"
     api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:$retrofin_kotlin_adapter_version"
 
-    if(useRXJava){
-        //RxJava
+    if(extensions.findByName('useRXJava') && extensions.getByName('useRXJava')){
+//        RxJava
         api "io.reactivex.rxjava2:rxjava:$rxJava"
         api "io.reactivex.rxjava2:rxandroid:$rxAndroid"
         api "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
