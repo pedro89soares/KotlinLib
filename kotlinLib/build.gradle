@@ -26,6 +26,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api "com.android.support:appcompat-v7:$support_version"
     api "com.android.support:recyclerview-v7:$support_version"
+    api "com.android.support:design:$support_version"
 
     //Kotlin
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -41,20 +42,22 @@ dependencies {
     api "com.google.code.gson:gson:$gson_version"
     api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:$retrofin_kotlin_adapter_version"
 
-    //RxJava
-    api "io.reactivex.rxjava2:rxjava:$rxJava"
-    api "io.reactivex.rxjava2:rxandroid:$rxAndroid"
-    api "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-support-v4:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-design:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-design-kotlin:$rxBinding"
-    api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7-kotlin:$rxBinding"
-    api "com.trello.rxlifecycle2:rxlifecycle:$rxLifeCycle"
-    api "com.trello.rxlifecycle2:rxlifecycle-android:$rxLifeCycle"
-    api "com.trello.rxlifecycle2:rxlifecycle-components:$rxLifeCycle"
+    if(useRXJava){
+        //RxJava
+        api "io.reactivex.rxjava2:rxjava:$rxJava"
+        api "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+        api "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-support-v4:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-design:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-kotlin:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-support-v4-kotlin:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-appcompat-v7-kotlin:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-design-kotlin:$rxBinding"
+        api "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7-kotlin:$rxBinding"
+        api "com.trello.rxlifecycle2:rxlifecycle:$rxLifeCycle"
+        api "com.trello.rxlifecycle2:rxlifecycle-android:$rxLifeCycle"
+        api "com.trello.rxlifecycle2:rxlifecycle-components:$rxLifeCycle"
+    }
 }

@@ -2,11 +2,11 @@ package com.pedrosoares.injectionmvvmlib.services
 
 import android.app.Application
 import android.content.Context
+import android.support.annotation.NonNull
 import com.pedrosoares.injectionmvvmlib.interfaces.DialogService
 import com.pedrosoares.injectionmvvmlib.interfaces.SharedPreferencesService
 import dagger.Module
 import dagger.Provides
-import io.reactivex.annotations.NonNull
 import com.pedrosoares.injectionmvvmlib.interfaces.NavigationService
 import javax.inject.Singleton
 
